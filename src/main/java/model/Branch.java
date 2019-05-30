@@ -17,8 +17,9 @@ public class Branch {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name = "address")
-    private String address;
-    @Column (name = "employee_list")
+    private Address address;
+
+    @ OneToMany(mappedBy= "employee_list")
     private List<Employee> employeeList;
     @Column (name = "available_cars")
     private List<Car> availableCars;

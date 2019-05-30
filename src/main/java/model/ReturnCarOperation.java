@@ -1,5 +1,7 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import io.micrometer.core.annotation.TimedSet;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,11 +12,11 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table (name = "rental_operation")
-
-public class RentalOperation {
+@Table (name = "return_car_operation")
+public class ReturnCarOperation {
     private Employee employee;
-    private Date FromDay;
+    private Date ToDay;
     private Reservation reservation;
+    private double extraPayment;
     private String additionalInfo;
 }

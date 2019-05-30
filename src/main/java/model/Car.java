@@ -8,9 +8,9 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table
+@Table (name = "car")
 public class Car {
-
+    // Warning:(12, 1) Access can be package-private cos takie bylo jak komitowalam
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 

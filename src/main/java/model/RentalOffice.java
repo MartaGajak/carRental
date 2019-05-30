@@ -1,8 +1,16 @@
 package model;
 
-import javax.swing.*;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.List;
 
+@Getter
+@Setter
+@Entity
+@Table (name = "rental_office")
 public class RentalOffice {
     private String name;
     private String URL;
