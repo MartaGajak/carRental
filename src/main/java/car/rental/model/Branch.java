@@ -12,16 +12,16 @@ import java.util.List;
 @Table(name = "branch")
 public class Branch {
 
-    @Id     // The @Id annotation marks a field as a primary key field.
+    @Id     // The @Id annotation marks a field as a primary key field. Potrzebne jesli masz @Entity
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name = "address")
     private String address;
 
-    @ OneToMany(mappedBy= "employee") // lub targetEntity = Employee.class
+    @ OneToMany(mappedBy= "branch") // lub targetEntity = Employee.class
     private List<Employee> employeeList;
 
-    @OneToMany (targetEntity = Car.class) //lub mappedBy = "car",
+    @OneToMany (targetEntity = Branch.class) //lub mappedBy = "car",
     @Column (name = "available_cars")
     private List<Car> availableCars;
 }
