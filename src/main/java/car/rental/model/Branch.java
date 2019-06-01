@@ -18,10 +18,10 @@ public class Branch {
     @Column(name = "address")
     private String address;
 
-    @ OneToMany(mappedBy= "employee_list")
+    @ OneToMany(mappedBy= "employee") // lub targetEntity = Employee.class
     private List<Employee> employeeList;
 
-    @OneToMany ( targetEntity = Car.class) //mappedBy = "car",
+    @OneToMany (targetEntity = Car.class) //lub mappedBy = "car",
     @Column (name = "available_cars")
     private List<Car> availableCars;
 }
