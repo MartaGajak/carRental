@@ -1,4 +1,4 @@
-package model;
+package car.rental.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,7 +18,7 @@ public class Car {
     private long idCar;
     @Column(name = "brand")
     private Brand brand;
-    @Column(name = "model")
+    @Column(name = "car/rental/model")
     private Model model;
     @Column(name = "body_type")
     private BodyType bodyType;

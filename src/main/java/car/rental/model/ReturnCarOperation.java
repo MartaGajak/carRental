@@ -1,12 +1,9 @@
-package model;
+package car.rental.model;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import io.micrometer.core.annotation.TimedSet;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Getter
@@ -14,6 +11,10 @@ import java.util.Date;
 @Entity
 @Table (name = "return_car_operation")
 public class ReturnCarOperation {
+
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY) //
+
     private Employee employee;
     private Date ToDay;
     private Reservation reservation;

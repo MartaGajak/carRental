@@ -1,6 +1,6 @@
-package service;
+package car.rental.service;
 
-import model.Branch;
+import car.rental.model.Branch;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package model;
+package car.rental.model;
 
 public enum Color {
 
