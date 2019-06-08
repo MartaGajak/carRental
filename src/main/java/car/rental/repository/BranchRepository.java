@@ -1,4 +1,4 @@
-package car.rental.service;
+package car.rental.repository;
 
 import car.rental.model.Branch;
 import org.springframework.data.jpa.repository.JpaRepository;

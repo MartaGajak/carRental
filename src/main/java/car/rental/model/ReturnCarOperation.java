@@ -15,9 +15,18 @@ public class ReturnCarOperation {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY) //
 
+    private long id;
+
+    @OneToOne (targetEntity = Employee.class)
+    @JoinColumn (name = "employee")
     private Employee employee;
+
     private Date ToDay;
+
+    @OneToOne (targetEntity = Reservation.class)
+    @JoinColumn (name = "reservation")
     private Reservation reservation;
+
     private double extraPayment;
     private String additionalInfo;
 }

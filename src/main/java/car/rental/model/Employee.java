@@ -8,15 +8,22 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table (name = "employee")
+@Table(name = "employee")
 
 public class Employee {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+    private long id;
     private String name;
     private String surname;
     private String jobTitle;
-    private String branch;
+
+//    @ManyToOne (targetEntity = Branch.class)
+//    private Branch branch;
+
+//
+//@JoinColumn (name = "")
+//    private String branch;
 }

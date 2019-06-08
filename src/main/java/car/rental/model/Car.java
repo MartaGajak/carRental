@@ -13,22 +13,34 @@ public class Car {
     // Warning:(12, 1) Access can be package-private cos takie bylo jak komitowalam
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    @Column(name = "id_car")
+    @Column(name = "id")
     private long idCar;
+
+    @Enumerated (EnumType.STRING)
     @Column(name = "brand")
     private Brand brand;
-    @Column(name = "car/rental/model")
+
+    @Enumerated (EnumType.STRING)
+    @Column(name = "model")
     private Model model;
+
+    @Enumerated (EnumType.STRING)
     @Column(name = "body_type")
     private BodyType bodyType;
+
     @Column(name = "production_year")
     private String productionYear;
+
+    @Enumerated (EnumType.STRING)
     @Column(name = "color")
     private Color color;
-    //@Enumerated(EnumType.STRING) to juz jest do bazy danych
+
+    @Enumerated(EnumType.STRING) //to juz jest do bazy danych
     @Column(name = "order_status")
     private OrderStatus orderStatus;
+
     @Column(name = "price_per_day")
     private double pricePerDay;
+
+
 }
