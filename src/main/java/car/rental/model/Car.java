@@ -1,6 +1,8 @@
 package car.rental.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -8,6 +10,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table (name = "car")
 public class Car {
     // Warning:(12, 1) Access can be package-private cos takie bylo jak komitowalam
@@ -29,7 +33,7 @@ public class Car {
     private BodyType bodyType;
 
     @Column(name = "production_year")
-    private String productionYear;
+    private int productionYear;
 
     @Enumerated (EnumType.STRING)
     @Column(name = "color")
